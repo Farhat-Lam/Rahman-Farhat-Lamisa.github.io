@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Farhat Lamisa — Academic Portfolio</title>
+  <style>
+    /* Reset & basics */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: sans-serif; line-height:1.6; color:#333; scroll-behavior:smooth; }
+    a { color:#0066cc; text-decoration:none; }
+    img { display:block; height:auto; max-width:100%; }
+
+    /* Utility */
+    .container { max-width:1000px; margin:0 auto; padding:0 1rem; }
+    h2 { font-size:1.75rem; margin-bottom:0.5rem; border-bottom:2px solid #ccc; padding-bottom:0.25rem; }
+
+    /* Hero */
+    .hero { text-align:center; padding:2rem 1rem; background:#f5f5f5; }
+    .hero__photo {
+      width:150px; height:150px; border-radius:50%; object-fit:cover; margin:0 auto 1rem;
+    }
+    .hero h1 { font-size:2rem; margin-bottom:0.25rem; }
+    .hero__title, .hero__interests { margin-bottom:0.25rem; }
+
+    /* Sections */
+    section { padding:2rem 0; }
+    section:not(:first-child) { border-top:1px solid #eee; }
+
+    /* Skills */
+    .skills-group { margin-bottom:1rem; }
+    .skills-group h3 { font-size:1.1rem; margin-bottom:0.5rem; }
+    .skills-list {
+      list-style:none; display:flex; flex-wrap:wrap; gap:0.5rem;
+    }
+    .skills-list li {
+      background:#e0e0e0; padding:0.5rem 1rem; border-radius:1rem;
+    }
+
+    /* Experience */
+    .experience-item { margin-bottom:1rem; }
+    .experience-item h3 {
+      font-size:1.25rem; margin-bottom:0.25rem;
+    }
+    .experience-item .period {
+      font-size:0.9rem; color:#666; margin-left:0.5rem;
+    }
+    .experience-item ul {
+      list-style:disc; margin-left:1.5rem; margin-top:0.5rem;
+    }
+
+    /* Research & Projects */
+    .project-card {
+      background:#fafafa; border-radius:8px; padding:1rem; margin-bottom:1rem;
+    }
+    .project-card h3 {
+      font-size:1.25rem; margin-bottom:0.5rem;
+    }
+    .project-card .abstract-short {
+      margin-left:1.25rem; margin-bottom:0.75rem; font-style:italic;
+    }
+    .project-card details { cursor:pointer; }
+    .project-card summary {
+      font-weight:bold; list-style:none; margin-left:1.25rem; margin-bottom:0.5rem;
+    }
+    .project-card summary::-webkit-details-marker { display:none; }
+    .project-card summary::before {
+      content:"▶ "; display:inline-block; transform:rotate(0deg); transition:transform .2s ease;
+    }
+    .project-card details[open] summary::before {
+      transform:rotate(90deg);
+    }
+    .project-card .abstract-full, .project-card .images {
+      margin-left:1.25rem; line-height:1.5; margin-bottom:0.75rem;
+    }
+
+    /* Center images and captions */
+    .project-card .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .project-card .images a {
+      flex: 1 1 45%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+    .project-card .images img {
+      border:1px solid #ddd;
+      border-radius:4px;
+    }
+    @media (max-width: 500px) {
+      .project-card .images a {
+        flex: 1 1 100%;
+      }
+    }
+
+    /* Footer */
+    footer { text-align:center; padding:1rem 0; background:#eee; font-size:0.9rem; }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <img src="lamisa.jpeg" alt="Farhat Lamisa" class="hero__photo">
+    <h1>Farhat Lamisa</h1>
+    <p class="hero__title">
+      Associate Data Analyst,
+      <a href="https://bizdatainsights.com/" target="_blank">BIZDATA INSIGHTS</a>
+    </p>
+    <p class="hero__interests">
+      Machine Learning · Deep Learning · Computer Vision · Data Science
+    </p>
+  </header>
+
+  <div class="container">
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am an Associate Data Analyst at 
+        <a href="https://bizdatainsights.com/" target="_blank">Bizdata Insights</a>, Bangladesh.
+        I received my Bachelor’s degree in Computer Science &amp; Engineering from North South University,
+        Dhaka (one of the top private universities in Bangladesh).
+      </p>
+      <p>
+        My research and professional interests span the broad domains of Artificial Intelligence, Machine Learning,
+        Deep Learning, Data Science, and Computer Vision. I strive to build AI‑driven software solutions that
+        address real‑world problems—whether that’s segmenting buildings in aerial imagery, detecting COVID‑19 from
+        chest X‑rays, or automating data pipelines to surface insights for business decision‑making.
+      </p>
+      <p>
+        I have 1.3 years of experience developing end‑to‑end data processing workflows, including web scraping
+        with Selenium/Scrapy/BeautifulSoup, data cleaning in Excel, and interactive Power BI dashboards. I’ve
+        implemented convolutional neural networks in Keras, TensorFlow, and PyTorch—achieving 97.89% accuracy
+        on a COVID‑19 X‑ray classification task and over 90% F1‑score on building segmentation with the INRIA
+        dataset. I also designed a GPT‑based chatbot to streamline internal data queries. Outside of work, I
+        enjoy exploring new ML architectures and sharing knowledge with peers in the data science community.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills &amp; Technologies</h2>
+      <div class="skills-group">
+        <h3>Data Science &amp; Analysis</h3>
+        <ul class="skills-list">
+          <li>Python</li>
+          <li>NumPy</li>
+          <li>Matplotlib</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Machine Learning &amp; Deep Learning</h3>
+        <ul class="skills-list">
+          <li>Keras</li>
+          <li>TensorFlow</li>
+          <li>PyTorch</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Computer Vision</h3>
+        <ul class="skills-list">
+          <li>OpenCV</li>
+        </ul>
+      </div>
+      <div class="skills-group">
+        <h3>Data Collection &amp; Cleaning</h3>
+        <ul class="skills-list">
+          <li>Selenium</li>
+          <li>Scrapy</li>
+          <li>BeautifulSoup</li>
+          <li>Excel</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="experience-item">
+        <h3>
+          Associate Data Analyst
+          <span class="period">Feb 2024 – Present</span>
+        </h3>
+        <ul>
+            <li>
+              Designed Python ETL pipelines (Scrapy, BeautifulSoup, SQL) to collect and structure raw data for analysis.
+            </li>
+            <li>
+              Cleaned and transformed datasets with Excel (Power Query) and pandas to ensure high‑quality inputs for modeling.
+            </li>
+            <li>
+              Developed interactive Power BI dashboards with DAX measures to visualize trends and drive data‑centric decisions.
+            </li>
+            <li>
+              Leading development of a Bengali GPT‑powered chatbot using the OpenAI API, integrating NLP and deep learning.
+            </li>
+          </ul>
+      </div>
+    </section>
+
+    <section id="research-projects">
+      <h2>Research &amp; Projects</h2>
+
+      <!-- COVID Paper -->
+      <div class="project-card">
+        <h3>
+          <h3>
+            Identification and detecting COVID‑19 from X‑ray images using Convolutional Neural Networks
+          </h3>
+        <p class="abstract-short">
+          A ConvNet approach that detects COVID‑19 from chest X‑ray scans, achieving 97.89% test accuracy
+          and very fast inference to support rapid screening.
+        </p>
+        <details>
+          <summary>Read full abstract &amp; view images</summary>
+          <div class="abstract-full">
+            <p>
+              The sudden increase of COVID‑19 patients is alarming, and it requires quick diagnosis in a quick time.
+              PCR testing is one of the most used methods to test and diagnose COVID, which is time-consuming.
+            </p>
+            <p>
+              In this paper, we present an end-to-end technique that can detect COVID-19 using chest X-ray scans.
+              We have trained and optimized a Convolutional Neural Network (ConvNet), which was trained on a large
+              COVID-19 dataset [3]. We have performed a series of experiments on a number of different architectures.
+              We have chosen the best performing network architecture and then carried on a series of additional
+              experiments to find the optimal set of hyper-parameters and show and justify a number of data
+              augmentation strategies that have allowed us to enhance our performance on the test set greatly.
+            </p>
+            <p>
+              Our final trained ConvNet has managed to obtain a test accuracy of 97.89%. This high accuracy and very
+              fast test speed can be beneficial to get quick COVID test results for further treatment.
+            </p>
+          </div>
+          <div class="images">
+            <a href="covid_vs_normal_lung.png" target="_blank">
+              <img src="covid_vs_normal_lung.png" alt="Lung: Covid vs Normal">
+              <figcaption>(a) Lung affected by COVID; (b) Normal lung</figcaption>
+            </a>
+          </div>
+        </details>
+        <a href="https://link.springer.com/chapter/10.1007/978-981-19-6631-6_39" target="_blank">
+           Read Paper.
+          </a>
+      </div>
+
+      <!-- Thesis Project -->
+      <div class="project-card">
+        <h3>Aerial Image Segmentation for Building Detection Using Deep Convolutional Neural Networks</h3>
+        <p class="abstract-short">
+          Semantic segmentation of aerial images to detect buildings and compute their areas with a deep CNN,
+          achieving 91.3% accuracy and 90.0% F1‑score on the INRIA dataset.
+        </p>
+        <details>
+          <summary>Read full abstract &amp; view images</summary>
+          <div class="abstract-full">
+            <p>
+              Image segmentation for building detection has applications in a variety of sectors, including urban
+              planning, mapping, disaster management, and relief, among others. Many different techniques have been
+              applied to extract building features and among them, using a convolutional neural network is the
+              state-of-the-art method in recent years.
+            </p>
+            <p>
+              Recent data science and remote sensing technologies make automated building detection possible,
+              significantly decreasing manual labor and contributing to dynamic urban monitoring. However, it
+              has been a challenging task since many years to detect buildings from aerial images due to a wide
+              range of parameters that can influence decision-making.
+            </p>
+            <p>
+              In this study, a technique has been proposed that uses deep learning to perform semantic segmentation
+              to identify the buildings from aerial images. The system also performs additional steps to calculate
+              the areas of the individual buildings from the images.
+            </p>
+            <p>
+              INRIA dataset has been used in this study and the best performing network architecture was chosen
+              after conducting a series of experiments on different architectures. This served as the baseline
+              network architecture. To create an optimal system, a number of tasks were carried out in addition to
+              a large number of experiments and the outcomes were analyzed quantitatively.
+            </p>
+            <p>
+              Our proposed method achieved a 91.3% accuracy and a 90.0% F1score on the INRIA dataset. The system then
+              uses the segmented output from the network to determine the area of the buildings.
+            </p>
+          </div>
+          <div class="images">
+            <a href="thesis_workflow_cropped.png" target="_blank">
+              <img src="thesis_workflow_cropped.png" alt="Thesis workflow diagram">
+              <figcaption>Workflow of training & testing pipeline</figcaption>
+            </a>
+            <a href="building_segmentation_result.png" target="_blank">
+              <img src="building_segmentation_result.png" alt="Building segmentation results">
+              <figcaption>(a) RGB; (b) Returned Mask with Building Area; (c) Overlayed in Input image</figcaption>
+            </a>
+          </div>
+        </details>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        📧 <a href="mailto:lamisafarhat32@gmail.com">lamisafarhat32@gmail.com</a><br>
+        🔗 <a href="https://www.linkedin.com/in/rahman-farhat-lamisa-6425b3201/" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Farhat Lamisa
+  </footer>
+</body>
+</html>

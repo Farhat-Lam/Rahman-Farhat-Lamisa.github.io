@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+header img {
+    width: 120px;
+    border-radius: 50%;
+}
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+}
+section {
+    padding: 2rem 5%;
+}
+h2 {
+    color: #004466;
+}
+.project {
+    display: flex;
+    margin-bottom: 2rem;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+}
+.project img {
+    width: 200px;
+    height: auto;
+    margin-right: 1rem;
+}
+.abstract {
+    display: none;
+    margin-top: 1rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #eee;
+}
